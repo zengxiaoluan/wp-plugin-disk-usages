@@ -26,18 +26,18 @@ function wpse_67876_wp_add_dashboard_widget()
 
     /* ABSOLUTE paths not being shown in Widget */
 
-    echo '<b>' . $upload_dir['basedir'] . ' </b><br />';
-    echo '<i>Uploads</i>: ' . wpse_67876_format_size($upload_space) . '<br /><br />';
+    echo '<b>' . $upload_dir['basedir'] . ' </b>';
+    echo ': ' . wpse_67876_format_size($upload_space) . '<br /><br />';
 
-    echo '<b>' . WP_CONTENT_DIR . ' </b><br />';
-    echo '<i>wp-content</i>: ' . wpse_67876_format_size($content_space) . '<br /><br />';
+    echo '<b>' . WP_CONTENT_DIR . ' </b>';
+    echo ': ' . wpse_67876_format_size($content_space) . '<br /><br />';
 
     if (is_multisite()) {
         echo '<i>wp-content/blogs.dir</i>: ' . wpse_67876_format_size(wpse_67876_foldersize(WP_CONTENT_DIR . '/blogs.dir')) . '<br /><br />';
     }
 
-    echo '<b>' . ABSPATH . ' </b><br />';
-    echo '<i>WordPress</i>: ' . wpse_67876_format_size($wp_space);
+    echo '<b>' . ABSPATH . ' </b>';
+    echo ': ' . wpse_67876_format_size($wp_space);
 
     $calc_root_path = ABSPATH;
     /* get disk space free (in bytes) */
