@@ -87,9 +87,9 @@ function wpse_67876_wp_add_dashboard_widget()
         <div class='prgtext'><?php echo $dp; ?>% Disk Used</div>
         <div class='prgbar' style="width:<?php echo $dp; ?>%;"></div>
         <div class='prginfo'>
-            <span style='float: left;'><?php echo "$du of $dt used"; ?></span>
-            <span style='float: right;'><?php echo "$df of $dt free"; ?></span>
-            <span style='clear: both;'></span>
+            <span style="margin-right: 10px;">Total: <?php echo $dt; ?></span>
+            <span style="margin-right: 10px;">Used: <?php echo $du; ?></span>
+            <span>Free: <?php echo $df; ?></span>
         </div>
     </div>
 <?php
